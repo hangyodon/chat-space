@@ -59,8 +59,8 @@ Things you may want to cover:
 |user_is|integer|null: false,foreign: true|
 
 ### Association
-- belong_to :groups
-- belong_to :users
+- belongs_to :group
+- belongs_to :user
 
 ## groups_usersテーブル
 
