@@ -58,4 +58,8 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign: true|
 |user_is|integer|null: false,foreign: true|
 
+### Association
+- belongs_to :groups
+- belongs_to :users
+
 
