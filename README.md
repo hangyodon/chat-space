@@ -30,3 +30,10 @@ Things you may want to cover:
 |name|string|null: false|
 |email|string|null: false, unique: true|
 |pass_word|integer|null: false|
+
+### Association
+
+- has_many :messages
+- has_many :users_group
+- has_many :groups, through: :groups_users
+
