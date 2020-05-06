@@ -17,11 +17,28 @@
       &__top-items {
         height: 20px;
         width: 260px;
-        background-color: #d8d8d8;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
         line-height: 20px;
+        font-weight: bold;
+        &__name {
+          color: #ffffff;
+        }
+        &__btn {
+          text-align: right;
+          width: 60px;
+          margin-left: auto;
+          &--setting {
+            margin-left: auto;
+            color: #ffffff;
+            text-decoration: none;
+          }
+          &--edit {
+            color: #ffffff;
+            text-decoration: none;
+          }           
+        }
       }
     }
     &__group-list{

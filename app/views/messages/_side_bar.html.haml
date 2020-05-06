@@ -3,6 +3,11 @@
     .side-bar__user-name__top-items
       .side-bar__user-name__top-items__name
         name
+      .side-bar__user-name__top-items__btn
+        = link_to "#", class: "side-bar__user-name__top-items__btn--edit" do
+          = icon('far','edit', class: "side-bar__user-name__top-items__btn--icon")
+        =link_to "#", class: "side-bar__user-name__top-items__btn--setting" do
+          = icon('fas','cog', class: "side-bar__user-name__top-items__btn--icon")
       .side-bar__user-name__top-items__icons
-      
+
   .side-bar__group-list
