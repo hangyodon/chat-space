@@ -68,6 +68,19 @@
       background-color: #ffffff;
       height: 100px;
       border-bottom: 1px solid #eeeeee;
+      &__left-box {
+        padding-left: 40px;
+        &__group-name {
+          padding-top: 35px;
+          color: #333333;
+          font-size: 20px;
+        }
+        &__group-member {
+          padding-top: 15px;
+          color: #999999;
+          font-size: 12px;
+        }
+      }
     }
     &__message-list {
       background-color: #fafafa;
