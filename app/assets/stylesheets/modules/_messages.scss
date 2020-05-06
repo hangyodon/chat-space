@@ -21,9 +21,9 @@
         display: flex;
         justify-content: space-between;
         line-height: 20px;
-        font-weight: bold;
         &__name {
           color: #ffffff;
+          font-weight: bold;
         }
         &__btn {
           text-align: right;
@@ -44,6 +44,20 @@
     &__group-list{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      &__box  {
+        padding: 0 20px;
+        &__name {
+          padding-top: 20px;
+          color: #ffffff;
+          font-size: 15px;
+        }
+        &__message {
+          color: #ffffff;
+          font-size: 11px;
+          padding-top: 5px;
+        }
+
+      }
     }
   }
 
