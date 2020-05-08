@@ -42,22 +42,22 @@
       }
     }
     &__group-list{
-      background-color: #2f3e51;
       height: calc(100vh - 100px);
-      &__box  {
-        padding: 0 20px;
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      &__group {
+        margin-bottom: 40px;
+        color: #ffffff;
         &__name {
-          padding-top: 20px;
-          color: #ffffff;
           font-size: 15px;
+          margin-bottom: 5px;
         }
         &__message {
-          color: #ffffff;
           font-size: 11px;
-          padding-top: 5px;
         }
-
       }
+        
     }
   }
 
@@ -99,7 +99,7 @@
       }
       
     }
-    &__message-list {
+    &__messages {
       background-color: #fafafa;
       height: calc(100vh - 190px);      
     }
