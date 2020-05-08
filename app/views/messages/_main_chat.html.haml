@@ -25,4 +25,12 @@
           2020/05/08(fri) 11:40:00
       .main-chat__messages__message__text
         聞こえませーん
+
   .main-chat__message-form
+    .main-chat__message-form__input-box
+      %input{type: "text", placeholder: "type a message", class: "main-chat__message-form__input-box__text"} 
+      %label{class: "main-chat__message-form__input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+    %input{type: "submit", value: "Send", class: "main-chat__message-form__submit"}
+      
