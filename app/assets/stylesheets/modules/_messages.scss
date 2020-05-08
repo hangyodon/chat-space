@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;
@@ -58,7 +63,6 @@
           font-size: 11px;
         }
       }
-        
     }
   }
 
@@ -127,7 +131,6 @@
           margin-bottom: 10px;
         }
       }
-
     }
     &__message-form {
       background-color: #d2d2d2;
@@ -165,9 +168,7 @@
         cursor: pointer ;
       }
     }
-
   }
-  
 }
 
 

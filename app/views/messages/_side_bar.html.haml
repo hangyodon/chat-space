@@ -4,20 +4,17 @@
       .side-bar__user-name__top-items__name
         = current_user.name
       .side-bar__user-name__top-items__btn
-        = link_to "#", class: "side-bar__user-name__top-items__btn--edit" do
+        = link_to new_group_path, class: "side-bar__user-name__top-items__btn--edit" do
           = icon('far','edit', class: "side-bar__user-name__top-items__btn--icon")
         =link_to edit_user_path(current_user), class: "side-bar__user-name__top-items__btn--setting" do
           = icon('fas','cog', class: "side-bar__user-name__top-items__btn--icon")
       .side-bar__user-name__top-items__icons
 
   .side-bar__group-list
-    .side-bar__group-list__group
-      .side-bar__group-list__group__name
-        ちわわ
-      .side-bar__group-list__group__message
-        まだメッセージがありません
-    .side-bar__group-list__group
-      .side-bar__group-list__group__name
-        といぷー
-      .side-bar__group-list__group__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-bar__group-list__group
+        = link_to '#' do
+          %p.side-bar__group-list__group__name
+            = group.name
+          %p.side-bar__group-list__group__message
+            メッセージはまだありません。
