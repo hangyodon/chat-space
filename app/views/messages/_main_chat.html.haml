@@ -2,35 +2,25 @@
   .main-chat__group-info
     .main-chat__group-info__left-box
       .main-chat__group-info__left-box__group-name
-        groupname
+        = @group.name
       .main-chat__group-info__left-box__group-member
-        member : name
+        member: 
+        - @group.users.each do |user|
+          = user.name
+          -# groupに所属しているusersテーブル全員をuserという変数で表す
+
     .main-chat__group-info__edit-btn
-      %a{href: "#"}Edit
+      = link_to "/groups/#{@group.id}/edit" do
+        Edit
           
   .main-chat__messages
-    .main-chat__messages__message
-      .main-chat__messages__message__upper-info
-        .main-chat__messages__message__upper-info__talker
-          禁書目録
-        .main-chat__messages__message__upper-info__date
-          2020/05/08(fri) 11:30:00
-      .main-chat__messages__message__text
-        お腹空いたかも
-    .main-chat__messages__message
-      .main-chat__messages__message__upper-info
-        .main-chat__messages__message__upper-info__talker
-          上条当麻
-        .main-chat__messages__message__upper-info__date
-          2020/05/08(fri) 11:40:00
-      .main-chat__messages__message__text
-        聞こえませーん
+    = render @messages
 
   .main-chat__message-form
-    .main-chat__message-form__input-box
-      %input{type: "text", placeholder: "type a message", class: "main-chat__message-form__input-box__text"} 
-      %label{class: "main-chat__message-form__input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file"}
-    %input{type: "submit", value: "Send", class: "main-chat__message-form__submit"}
-      
+    = form_for [@group, @message] do |f|
+      .main-chat__message-form__input-box
+        = f.text_field :content, class: "main-chat__message-form__input-box__text", placeholder: "type a message" 
+        = f.label :image, class: "main-chat__message-form__input-box__image" do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'main-chat__message-form__submit'
